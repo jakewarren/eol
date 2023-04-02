@@ -206,9 +206,9 @@ func createContent(cycle *api.Cycle) (*tableContenet, error) {
 		header = append(header, "#")
 		row = append(row, *cycle.Cycle.I)
 	}
-	if cycle.Release != nil {
+	if cycle.ReleaseDate != nil {
 		header = append(header, "Release")
-		row = append(row, *cycle.Release)
+		row = append(row, *cycle.ReleaseDate)
 	}
 	if cycle.EOL.S != nil {
 		eol, err := setColorDate(*cycle.EOL.S)
